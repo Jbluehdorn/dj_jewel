@@ -1,0 +1,23 @@
+{
+  "name": "dj_jewel",
+  "version": "1.0.0",
+  "description": "This is my twitch bot DJ",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jbluehdorn/dj_jewel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jbluehdorn/dj_jewel/issues"
+  },
+  "homepage": "https://github.com/Jbluehdorn/dj_jewel#readme",
+  "devDependencies": {
+    "electron": "^10.1.3"
+  }
+}

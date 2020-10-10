@@ -4,6 +4,7 @@ const WIDTH = 800
 const HEIGHT = 600
 
 function createWindow() {
+    console.log('doing a thing')
     const win = new BrowserWindow({
         width: WIDTH,
         height: HEIGHT,
@@ -13,6 +14,8 @@ function createWindow() {
     })
 
     win.loadFile('index.html')
+    
+    win.webContents.openDevTools()
 }
 
 app.whenReady().then(createWindow)

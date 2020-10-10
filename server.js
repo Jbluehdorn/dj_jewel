@@ -6,7 +6,17 @@ const app = express()
 const port = 3000
 
 app.get('/video', (req, res) => {
-    const url = req.query.url
+    const query = req.query.query
+    let url = query
+
+    if(query.includes('youtube.com/watch?')) {
+        let v = query.slice(
+            query.indexOf('v=') + 2,
+            query.length
+        )
+
+        url = v.includes('&') ? v.slice(0, v.indexOf('&')) : v
+    }
     
     res.header('Content-Dispotion', 'attachment;fileName="video.mp4"')
 

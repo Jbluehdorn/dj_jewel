@@ -13,11 +13,4 @@ const client = new tmi.Client({
     channels: [ 'ironthejewel' ]
 })
 
-export const run = () => {
-    client.connect().catch(console.error)
-
-    client.on('message', (channel, tags, message, self) => {
-        if(self) return
-        console.log('Message incoming!', message, tags)
-    })
-}
+export default client

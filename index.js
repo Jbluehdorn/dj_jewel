@@ -4,13 +4,14 @@ const WIDTH = 800
 const HEIGHT = 600
 
 function createWindow() {
-    console.log('doing a thing')
     const win = new BrowserWindow({
         width: WIDTH,
         height: HEIGHT,
         webPreferences: {
-            nodeIntegration: true
-        }
+            nodeIntegration: true,
+            webSecurity: false
+        },
+        resizable: false
     })
 
     win.loadFile('index.html')

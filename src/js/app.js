@@ -1,6 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Main from './pages/main'
+import { Provider } from 'react-redux'
+import store from './store/redux'
 
-ReactDOM.render(<Main />, document.getElementById('app'))
+import Main from './pages/main.jsx'
+
+const rootElement = document.getElementById('app')
+ReactDOM.render(
+    <Provider store={store}>
+        <Main />
+    </Provider>,
+    rootElement
+)

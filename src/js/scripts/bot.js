@@ -18,6 +18,6 @@ export const run = () => {
 
     client.on('message', (channel, tags, message, self) => {
         if(self) return
-        console.log('Message incoming!', message)
+        console.log('Message incoming!', message, tags)
     })
 }

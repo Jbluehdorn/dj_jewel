@@ -1,14 +1,20 @@
 export const musicBotActionTypes = {
     addSong: 'addSong',
-    setCurrentSong: 'setCurrentSong'
+    setCurrentSong: 'setCurrentSong',
+    setSongPlayed: 'setSongPlayed'
 }
 
-export const addSongAction = (user, watchLink) => ({
+export const addSongAction = (user, query) => ({
     type: musicBotActionTypes.addSong,
     payload: {
         user,
-        watchLink
+        query
     }
+})
+
+export const setSongPlayed = (id) => ({
+    type: musicBotActionTypes.setSongPlayed,
+    payload: id
 })
 
 export const setCurrentSongAction = (query) => ({

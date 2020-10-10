@@ -1,5 +1,8 @@
 .musicBot {
     #song_video {
-        width: 100%
+        max-width: 100%;
+        max-height: 200px;
+        margin: auto;
+        display: block;
     }
 }
